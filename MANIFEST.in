@@ -1,0 +1,5 @@
+include versioneer.py
+include reduce_mcp3/_version.py
+include README.md
+include reduce_mcp3/*
+recursive-include icons *.png *.svg *.ico

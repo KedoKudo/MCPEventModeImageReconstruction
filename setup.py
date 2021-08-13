@@ -68,7 +68,7 @@ test_requires = read_requirements_from_file(
     os.path.join(THIS_DIR, 'requirements_dev.txt'))
 
 if __name__ == "__main__":
-    scripts = ['scripts/reducer.py']
+    scripts = ['scripts/mcp3_reducer.py']
     setup(
         name=NAME,
         description=find_meta("description"),

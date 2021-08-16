@@ -6,14 +6,14 @@ using gaussian fit method.
 
 The input event should have integer as cluster ID.
 """
-
+import concurrent.futures as cf
 import logging
+from multiprocessing import cpu_count
 from typing import Tuple
+
+import lmfit
 import numba
 import numpy as np
-import lmfit
-import concurrent.futures as cf
-from multiprocessing import cpu_count
 from tqdm import tqdm
 
 

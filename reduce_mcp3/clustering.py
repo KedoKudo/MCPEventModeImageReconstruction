@@ -11,7 +11,6 @@ should contains 32_000_000 events with a rough time span of 1s.
 It should be noted that events are not uniformlly distributed along
 the time axis.
 """
-
 import numpy as np
 from sklearn.cluster import DBSCAN
 
@@ -23,7 +22,7 @@ def cluster_domain_DBScan(
 ) -> np.ndarray:
     """
     return the cluster ID based on the given data using DBScan
-    
+
     @param x: event position x vector
     @param y: event position y vector
     @param time: event TOA vector
@@ -40,7 +39,7 @@ def cluster_domain_DBScan(
             n_jobs=1,  # parallel on the top level
         ).fit(features)
         return clustering.labels_
-    except:
+    except RuntimeError:
         return None
 
 

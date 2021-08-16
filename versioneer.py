@@ -1,6 +1,4 @@
-
 # Version: 0.20
-
 """The Versioneer - like a rocketeer, but for versions.
 
 The Versioneer
@@ -274,7 +272,6 @@ https://img.shields.io/travis/com/python-versioneer/python-versioneer.svg
 [travis-url]: https://travis-ci.com/github/python-versioneer/python-versioneer
 
 """
-
 import configparser
 import errno
 import json

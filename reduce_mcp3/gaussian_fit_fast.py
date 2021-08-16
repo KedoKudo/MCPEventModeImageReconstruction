@@ -8,9 +8,8 @@ For more infomration, refers to DOI: 10.1021/la900393v
 
 The input event should have integer as cluster ID.
 """
-
-import numpy as np
 import numba
+import numpy as np
 
 
 @numba.jit(nopython=True, parallel=True)

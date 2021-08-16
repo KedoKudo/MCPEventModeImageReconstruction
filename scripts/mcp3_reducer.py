@@ -15,10 +15,10 @@ Options:
     -h --help     Show this screen.
     -r --restart  Restart at given row.
 """
-
-import os
 import logging
+import os
 import subprocess
+
 import h5py
 from docopt import docopt
 

@@ -3,10 +3,10 @@
 """
 Provide several useful auxilary functions to facilitate the data reduction.
 """
+from dataclasses import dataclass
 
 import h5py
 import numpy as np
-from dataclasses import dataclass
 
 
 @dataclass

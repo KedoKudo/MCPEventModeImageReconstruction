@@ -6,7 +6,6 @@ using weighted centroid method.
 
 The input event should have integer as cluster ID.
 """
-
 import numba
 import numpy as np
 

@@ -3,9 +3,9 @@
 """
 Utility functions for MCP3 data reduction
 """
+from typing import Tuple
 
 import numpy as np
-from typing import Tuple
 
 
 def empty_image(

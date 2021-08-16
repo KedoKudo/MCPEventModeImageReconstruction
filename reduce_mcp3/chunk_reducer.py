@@ -10,22 +10,22 @@ Usage:
 Options:
     -h --help     Show this screen.
 """
-
-import os
+import concurrent.futures as cf
 import logging
+import os
+from multiprocessing import cpu_count
+
 import h5py
 import numpy as np
-import concurrent.futures as cf
-from multiprocessing import cpu_count
 from docopt import docopt
 from tqdm import tqdm
 
-from .io import events_from_h5
 from .clustering import cluster_domain_DBScan
+from .gaussian_fit_fast import events_to_img
+from .io import events_from_h5
+from .util import empty_image
 # from .weighted_centroid import events_to_img
 # from .gaussian_fit import events_to_img
-from .gaussian_fit_fast import events_to_img
-from .util import empty_image
 
 
 def reduce_chunck_to_img(
@@ -61,7 +61,7 @@ def reduce_chunck_to_img(
     #
     domain_starts = range(0, chunksize, int(0.95 * domainsize))
     ncpu = max(1, cpu_count() - 1)
-    logging.info(f"Plan and execute clustering of domains")
+    logging.info("Plan and execute clustering of domains")
     with cf.ProcessPoolExecutor(ncpu) as e:
         with tqdm(total=len(domain_starts)) as progress:
             # plan

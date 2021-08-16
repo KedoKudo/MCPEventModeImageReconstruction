@@ -1,8 +1,10 @@
 import codecs
 import os
 import re
+
 import versioneer  # https://github.com/warner/python-versioneer
-from setuptools import setup, find_packages
+from setuptools import find_packages
+from setuptools import setup
 
 NAME = "reduce_mcp3"
 META_PATH = os.path.join("reduce_mcp3", "__init__.py")

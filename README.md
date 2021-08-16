@@ -44,3 +44,5 @@ pip install -r requirement_dev.txt
 ```
 
 Once you finished implementing the new features or bug fixes, you can submit a pull request and the maintainer will review and merge it once it is ready.
+
+> NOTE: `pre-commit` is used to guard the quality of the source code, please do not disable it during your local development.
